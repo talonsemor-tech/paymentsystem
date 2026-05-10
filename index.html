@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M-Pesa Payment System</title>
+  <link rel="stylesheet" href="frontend/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <h1>M-Pesa Payment System</h1>
+      <p>Send a payment request to your phone and track the transaction from the dashboard.</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="2547XXXXXXXX" />
+
+        <label for="amount">Amount (KES)</label>
+        <input id="amount" type="number" placeholder="100" />
+
+        <button id="payButton">Send Payment Request</button>
+      </div>
+
+      <div class="card" id="resultCard" hidden>
+        <h2>Request Status</h2>
+        <pre id="resultText"></pre>
+      </div>
+    </main>
+  </div>
+
+  <script src="frontend/script.js"></script>
+</body>
+</html>
