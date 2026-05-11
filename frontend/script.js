@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:5000'; // Replace with your live backend URL after deployment
+const BACKEND_URL = 'https://paymentsystem-yrtc.onrender.com';
 const payButton = document.getElementById('payButton');
 const resultCard = document.getElementById('resultCard');
 const resultText = document.getElementById('resultText');
