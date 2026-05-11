@@ -14,12 +14,24 @@ This repository contains a complete M-Pesa payment system with a Node.js backend
 ```bash
 npm install
 ```
-2. Copy `.env.example` to `.env` and add your credentials.
-3. Start the server:
+2. Create a MongoDB Atlas cluster:
+   - Cluster Name: `AfricaPayCluster`
+   - Cloud Provider: `AWS`
+   - Region: `US East (N. Virginia)` (`aws/us-east-1`)
+   - Tier: `M0 Sandbox`
+3. Create a database user:
+   - Username: `talonsemor_db_user`
+   - Password: `40584043Aa.`
+4. Create or use database name: `mpesa-payment-system`
+5. Add network access for testing:
+   - `0.0.0.0/0` (or your specific IP/Render IP)
+6. Copy `.env.example` to `.env` and add your credentials.
+   - `MONGO_URI=mongodb+srv://talonsemor_db_user:40584043Aa.@africapaycluster.mongodb.net/mpesa-payment-system?retryWrites=true&w=majority`
+7. Start the server:
 ```bash
 npm run dev
 ```
-4. Open `frontend/index.html` in your browser or host it on a static site.
+8. Open `frontend/index.html` in your browser or host it on a static site.
 
 ## API Endpoints
 - `POST /api/mpesa/pay` - send STK Push request
